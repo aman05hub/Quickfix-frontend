@@ -1,0 +1,87 @@
+.bookings-page{
+padding:40px 20px;
+background:#f4f6fb;
+min-height:100vh;
+}
+
+.bookings-page h1{
+text-align:center;
+margin-bottom:35px;
+font-size:32px;
+color:#333;
+}
+
+/* Grid */
+
+.bookings-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+}
+
+/* Card */
+
+.booking-card{
+background:transparent;
+padding:20px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.booking-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.service-title{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.booking-info{
+margin-bottom:8px;
+}
+
+.booking-info p{
+margin:3px 0;
+font-size:14px;
+}
+
+.booking-info span{
+font-weight:600;
+}
+
+.payment-badge{
+display:inline-block;
+padding:4px 10px;
+border-radius:20px;
+font-size:12px;
+margin-top:10px;
+}
+
+.payment-badge.paid{
+background:#d4edda;
+color:#2e7d32;
+}
+
+.payment-badge.unpaid{
+background:#f8d7da;
+color:#c62828;
+}
+
+.pay-btn{
+margin-top:10px;
+padding:6px 12px;
+background:#4CAF50;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.pay-btn:hover{
+background:#43a047;
+}

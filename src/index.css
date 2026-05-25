@@ -1,0 +1,116 @@
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #111;
+}
+
+body.dark{
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark .navbar{
+    background: rgba(15,23,42,0.9);
+}
+
+body.dark .hero{
+    background: #0f172a;
+}
+
+body.dark .hero-text h1 {
+    color: #f1f5f9;
+}
+
+body.dark .hero-subtext{
+    color: #cbd5f5;
+}
+
+body.dark .search-box input{
+    background: #1e293b;
+    color: white;
+    border: 1px solid #475569;
+}
+
+body.dark .search-box button{
+    background: #6366f1;
+}
+
+body.dark .service-box,
+body.dark .booking-card,
+body.dark .provider-card{
+    background: #1e293b;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+body.dark .services-section,
+body.dark .how-section,
+body.dark .why-section,
+body.dark .provider-page,
+body.dark .bookings-page{
+    background: transparent;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p {
+    color: #e5e7eb;
+}
+
+body.dark a {
+    color:#c7d2fe;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea{
+    background: 1e293b;
+    color: white;
+    border: 1px solid #475569;
+}
+
+body.dark button{
+    opacity: 0.95;
+}
+
+body.dark .status.pending{
+    color: #facc15;
+}
+
+body.dark .status.accepted{
+    color: #22c55e;
+}
+
+body.dark .status.completed{
+    color: #3b82f6;
+}
+
+body.dark .status.rejected{
+    color: #ef4444;
+}
+
+body.dark .primary-btn{
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: 1px solid #818cf8;
+    color: white;
+}
+
+body.dark .secondary-btn{
+    background: transparent;
+    border: 2px solid #818cf8;
+    color: #818cf8;
+}
+
+body.dark .secondary-btn:hover{
+    background: #818cf8;
+    color: white;
+}
+
+body.dark .dropdown{
+    background: #1e293b;
+    color: white;
+}
+
+body.dark .dropdown a {
+    color: white;
+}

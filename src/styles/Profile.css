@@ -1,0 +1,273 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.profile-card {
+    width: 420px;
+    background: #ffffff;
+    color: #000;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+body.dark .profile-card {
+    background: #1e1e2f;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.profile-header {
+    text-align: center;
+}
+
+body.dark .profile-header p {
+    color: #aaa;
+}
+
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.img-wrapper img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.upload-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.photo-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.photo-actions button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+body.dark .photo-actions button {
+    background: #333;
+    color: #fff;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+}
+
+body.dark .delete-btn {
+    background: #ff4d4f;
+}
+
+.progress-bar {
+    height: 6px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+body.dark .progress-bar {
+    background: #333;
+}
+
+.progress-bar div {
+    height: 100%;
+    background: #4caf50;
+}
+
+.profile-form {
+    margin-top: 15px;
+}
+
+.input-group {
+    margin-bottom: 12px;
+}
+
+.input-group label {
+    font-size: 14px;
+}
+
+body.dark .input-group label {
+    color: #ccc;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+body.dark .input-group input {
+    background: #2c2c3e;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+body.dark .save-btn {
+    background: #4dabf7;
+}
+
+button{
+    transition: all 0.3s ease;
+}
+
+body.dark {
+    background: #121212;
+}
+
+.profile-section {
+    margin-top : 20px;
+}
+
+.profile-section h3 {
+    margin-bottom: 10px;
+}
+
+.profile-section input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.profile-section button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #4caf50;
+    color: white;
+    border: none;
+}
+
+.strength {
+    font-size: 12px;
+}
+
+.strength.weak {
+    color: red;
+}
+
+.strength.medium {
+    color: orange;
+}
+
+.strength.strong {
+    color: green;
+}
+
+.edit-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    border:none;
+    background: #555;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-box{
+    width: 380px;
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    animation: popup 0.25s ease;
+}
+
+body.dark .modal-box {
+    background: #1f1f2e;
+    color: white;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+body.dark .modal-box input {
+    background: #2c2c3e;
+    border: 1px solid #444;
+    color: white;
+}
+
+.modal-actions{
+    display: flex;
+    gap: 10px;
+}
+
+.modal-actions button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal-actions button:first-child {
+    background: #2196F3;
+    color: white;
+}
+
+.modal-actions button:last-child {
+    background: #ff4d4f;
+    color: white;
+}
+
+@keyframes popup {
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
