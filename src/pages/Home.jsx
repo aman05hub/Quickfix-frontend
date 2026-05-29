@@ -173,7 +173,7 @@ const Home = () => {
         <div className="container cta-inner reveal">
           <h2>Ready to get your home fixed?</h2>
           <p>Join thousands of happy customers using QuickFix every day.</p>
-          <Link to="/register" className="primary-btn">
+          <Link to="/services" className="primary-btn">
             Book a Service Now <FaArrowRight style={{ fontSize: 13 }} />
           </Link>
         </div>
