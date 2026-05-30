@@ -24,8 +24,7 @@ const AddService = () => {
     //submit
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        if(!form.title || !form.price || !form.serviceType){
+        if(!form.price || !form.serviceType){
             return toast.error("All fields are required");
         }
 
