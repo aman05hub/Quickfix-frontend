@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
 import {
@@ -8,8 +8,7 @@ import {
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const navigate = useNavigate();
-const [selectedService, setSelectedService] = useState("");
+
 
 const services = [
   { icon: <FaBolt />,       title: "Electrician", desc: "Fan repair, wiring, switch fixing and more.", color: "#f59e0b" },
@@ -32,6 +31,10 @@ const whys = [
 ];
 
 const Home = () => {
+  
+  const navigate = useNavigate();
+const [selectedService, setSelectedService] = useState("");
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => entries.forEach(e => {
