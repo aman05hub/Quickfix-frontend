@@ -41,7 +41,6 @@ const AddService = () => {
 
             //Reset form
             setForm({
-                title: "",
                 description: "",
                 price: "",
                 serviceType: ""
