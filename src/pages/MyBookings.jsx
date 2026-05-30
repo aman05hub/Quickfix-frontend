@@ -40,11 +40,35 @@ const MyBookings = () => {
                         <div className="booking-info">
 
                             <p>
-                                📅<span>Date:</span> {booking.date}
+                                📅 Date :{" "}
+                                {new Date(booking.date).toLocaleDateString("en-In",{
+                                    day: "2-digit",
+                                    month: "long",
+                                    year: "numeric"
+                                })}
                             </p>
 
                             <p>
                                 ⏰<span>Time:</span> {booking.time}
+                            </p>
+
+                            <p>
+                                📍<span>Address:</span> {booking.address}
+                            </p>
+
+                            <p>
+                                📞<span>Phone:</span> {booking.phone}
+                            </p>
+
+                            <p>
+                                📝 Booked On:{" "}
+                                {new Date(booking.createdAt).toLocaleDateString("en-In",{
+                                    day: "2-digit",
+                                    month: "long",
+                                    year: "numeric",
+                                    hour: "2-digit",
+                                    minute: "2-digit"
+                                })}
                             </p>
 
                         </div>
