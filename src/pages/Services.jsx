@@ -1,10 +1,12 @@
 import React,{ useEffect, useState } from "react";
 import API from "../services/api";
+import { serviceIcons } from "../utils/serviceIcons";
 import "../styles/Services.css";
 import BookingModal from "../components/BookingModal";
 
 const Services = () => {
 
+    const Icon = serviceIcons[service.serviceType];
     const [services, setServices] = useState([]);
     const [selectedService, setSelectService] = useState(null);
     const [message, setMessage] = useState("")
@@ -58,43 +60,10 @@ const Services = () => {
         }
     };
    
-
-    const getIcon = (title) => {
-
-        if(title.toLowerCase().includes("electric")){
-            return(
-                <svg viewBox="0 0 24 24">
-                    <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
-                </svg>
-            );
-        }
-
-        if(title.toLowerCase().includes("plumb")){
-            return(
-                <svg viewBox="0 0 24 24">
-                    <path d="M21 7h-6V3h-2v4H3v2h10v4h2V9h6z"/>
-                </svg>
-            );
-        }
-
-        if(title.toLowerCase().includes("ac")){
-            return(
-                <svg viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="5"/>
-                </svg>
-            );
-        }
-
-        if(title.toLowerCase().includes("clean")){
-            return(
-                <svg viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="5"/>
-                </svg>
-            )
-        }
-
-        return "🛠";
-    };
+    const getServiceIcon = (serviceType) => {
+        const Icon = serviceIcons[serviceType];
+        return Icon ? <Icon /> : "🛠️";
+    }
 
     return (
         <div className="services-page">
@@ -106,7 +75,7 @@ const Services = () => {
                 {services.map((service) => (
                     <div className="service-card" key={service._id}>
                         <div className="service-icon">
-                            {getIcon(service.title)}
+                            {getServiceIcon(service.serviceType)}
                         </div>
                         <h3>{service.title}</h3>
                         <p>{service.description}</p>
