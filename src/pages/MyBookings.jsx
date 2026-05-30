@@ -94,19 +94,7 @@ const MyBookings = () => {
                             )
                         }
 
-                        {/* {booking.status === "accepted" && (
-                            <ChatPage bookingId={booking._id} />
-                        )} */}
-
-                        {booking.status === "accepted" && booking.paymentStatus === "unpaid" && (
-
-                            <button
-                            className="pay-btn"
-                            onClick={() => setSelectedBooking(booking)}
-                            >
-                                Pay Now
-                            </button>
-                        )}
+                        
                     </div>
                 ))}
             </div>
