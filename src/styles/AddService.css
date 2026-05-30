@@ -1,4 +1,4 @@
-.add-sevice-page{
+/* .add-service-page{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,4 +61,146 @@ body.dark textarea{
 
 .add-service-card button:hover{
     background: #218838;
+} */
+
+/* Page */
+.add-service-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px 15px;
+    background:#f5f6fa;
+}
+
+body.dark .add-service-page{
+    background:#121212;
+}
+
+/* Card */
+.add-service-card{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    width:100%;
+    max-width:500px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+body.dark .add-service-card{
+    background:#1f2937;
+    color:white;
+}
+
+/* Heading */
+.add-service-card h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:2rem;
+    font-weight:700;
+}
+
+/* Form */
+.add-service-card form{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+/* Inputs */
+.add-service-card input,
+.add-service-card textarea,
+.add-service-card select{
+    width:100%;
+    padding:14px;
+    border-radius:12px;
+    border:1px solid #d1d5db;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+.add-service-card textarea{
+    min-height:120px;
+    resize:none;
+}
+
+/* Focus */
+.add-service-card input:focus,
+.add-service-card textarea:focus,
+.add-service-card select:focus{
+    border-color:#6366f1;
+    box-shadow:0 0 0 3px rgba(99,102,241,0.15);
+}
+
+/* Dark Inputs */
+body.dark .add-service-card input,
+body.dark .add-service-card textarea,
+body.dark .add-service-card select{
+    background:#374151;
+    color:white;
+    border:1px solid #4b5563;
+}
+
+/* Dropdown Options */
+body.dark select option{
+    background:#374151;
+    color:white;
+}
+
+/* Category */
+.category-box{
+    padding:12px;
+    border-radius:10px;
+    background:#eef2ff;
+    color:#4338ca;
+    font-size:14px;
+    font-weight:600;
+}
+
+body.dark .category-box{
+    background:#111827;
+    color:#93c5fd;
+}
+
+/* Button */
+.add-service-card button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6
+    );
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.add-service-card button:hover{
+    transform:translateY(-2px);
+}
+
+.add-service-card button:disabled{
+    opacity:0.7;
+    cursor:not-allowed;
+}
+
+/* Mobile */
+@media(max-width:600px){
+    .add-service-card{
+        padding:25px;
+    }
+
+    .add-service-card h2{
+        font-size:1.6rem;
+    }
+}
+
+.add-service-card select{
+    cursor:pointer;
 }
