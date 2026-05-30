@@ -112,12 +112,7 @@ const Services = () => {
                         <p>{service.description}</p>
                         <p><b>₹{service.price}</b></p>
 
-                        <button 
-                            className="pay-btn" 
-                            onClick={() => handlePayment(service)}
-                        >
-                                Pay ₹{service.price}
-                        </button>
+                        
 
                         <button 
                             className="book-btn" 
