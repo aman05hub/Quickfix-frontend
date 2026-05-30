@@ -51,7 +51,7 @@ const BookingModal = ({ serviceId, closeModal }) => {
                     setSuccess(true);
 
                     setTimeout(() => {
-                        closeModel();
+                        closeModal();
                     },2000);
                 }
             };
@@ -68,7 +68,7 @@ const BookingModal = ({ serviceId, closeModal }) => {
 
     };
     const timeSlots = ["09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00"];
-
+    const today = new Date().toISOString().split("T")[0];
     return (
         <div className="modal-overlay">
             <div className="modal-box">
@@ -85,6 +85,7 @@ const BookingModal = ({ serviceId, closeModal }) => {
                     <input 
                     type="date"
                     value={date}
+                    min={today}
                     onChange={(e) => setDate(e.target.value)}
                     />
 

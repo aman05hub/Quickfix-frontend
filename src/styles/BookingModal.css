@@ -1,4 +1,4 @@
-.modal-overlay{
+/* .modal-overlay{
 position:fixed;
 top:0;
 left:0;
@@ -99,4 +99,139 @@ color:#28a745;
 color:red;
 font-size:13px;
 margin-bottom:8px;
+} */
+
+.modal-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.75);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.modal-box{
+  background:#1c1f35;
+  color:white;
+  padding:35px;
+  border-radius:24px;
+  width:500px;
+  max-width:90%;
+  box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+.modal-box h2{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:2rem;
+}
+
+.input-group{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:20px;
+}
+
+.input-group label{
+  font-size:1.1rem;
+  margin-bottom:8px;
+  color:#e5e7eb;
+}
+
+.input-group input{
+  padding:14px;
+  border-radius:12px;
+  border:1px solid #3d4263;
+  background:#2a2d47;
+  color:white;
+  font-size:1rem;
+  outline:none;
+  transition:0.3s;
+}
+
+.input-group input::placeholder{
+  color:#9ca3af;
+}
+
+.input-group input:focus{
+  border-color:#4CAF50;
+  box-shadow:0 0 0 2px rgba(76,175,80,0.25);
+}
+
+.time-slots{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:10px;
+}
+
+.slot{
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #4a4f74;
+  background:transparent;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.slot:hover{
+  background:#2f3453;
+}
+
+.slot.active{
+  background:#4CAF50;
+  color:white;
+  border:none;
+}
+
+.modal-buttons{
+  display:flex;
+  justify-content:space-between;
+  margin-top:25px;
+}
+
+.confirm-btn{
+  background:#4CAF50;
+  color:white;
+  border:none;
+  padding:14px 24px;
+  border-radius:10px;
+  font-size:1rem;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.confirm-btn:hover{
+  transform:translateY(-2px);
+}
+
+.cancel-btn{
+  background:#ef4444;
+  color:white;
+  border:none;
+  padding:14px 24px;
+  border-radius:10px;
+  font-size:1rem;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.cancel-btn:hover{
+  transform:translateY(-2px);
+}
+
+.success-box{
+  text-align:center;
+  color:#4CAF50;
+}
+
+.error-msg{
+  color:#ff6b6b;
+  font-size:14px;
+  margin-top:8px;
 }
