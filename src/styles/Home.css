@@ -249,11 +249,14 @@
   width: 380px;
 }
 .hero-img-wrap img {
+  position:relative;
+  z-index:5;
   width: 100%;
   filter: drop-shadow(0 20px 40px rgba(79,70,229,0.15));
 }
 
 .floating-card {
+  z-index: 2;
   position: absolute;
   background: #fff;
   border-radius: 12px;
@@ -477,4 +480,26 @@ body.dark .steps-grid::before { background: linear-gradient(90deg, #2d2b4e, #4f4
 @media (max-width: 480px) {
   .services-grid { grid-template-columns: 1fr; }
   .hero-left h1  { font-size: 32px; }
+}
+
+.service-dropdown{
+  flex:1;
+  height:52px;
+  border:none;
+  outline:none;
+  background:transparent;
+  color:var(--text-color);
+  font-size:15px;
+  padding:0 12px;
+  cursor:pointer;
+}
+
+.service-dropdown option{
+  background:#1f2937;
+  color:white;
+}
+
+body.light .service-dropdown option{
+  background:white;
+  color:black;
 }

@@ -6,6 +6,10 @@ import {
   FaShieldAlt, FaClock, FaStar, FaCheckCircle,
   FaArrowRight, FaSearch
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
+const [selectedService, setSelectedService] = useState("");
 
 const services = [
   { icon: <FaBolt />,       title: "Electrician", desc: "Fan repair, wiring, switch fixing and more.", color: "#f59e0b" },
@@ -68,8 +72,33 @@ const Home = () => {
 
             <div className="search-box">
               <FaSearch className="search-icon" />
-              <input type="text" placeholder="Search: electrician, plumber, cleaner…" />
-              <button>Search</button>
+
+              <select className="service-dropdown"
+                value={selectedService}
+                onChange={(e) => setSelectedService(e.target.value)}
+              >
+                <option value="">All Services</option>
+                <option value="AC Cleaning">AC Cleaning</option>
+                <option value="AC Repair">AC Repair</option>
+                <option value="Fan Repair">Fan Repair</option>
+                <option value="Laptop Repair">Laptop Repair</option>
+                <option value="Mobile Repair">Mobile Repair</option>
+                <option value="Electrician">Electrician</option>
+                <option value="Plumber">Plumber</option>
+                <option value="Painter">Painter</option>
+                <option value="Carpenter">Carpenter</option>
+                <option value="Home Cleaning">Home Cleaning</option>
+                <option value="Water Purifier">Water Purifier</option>
+                <option value="TV Repair">TV Repair</option>
+                <option value="Washing Machine Repair">Washing Machine Repair</option>
+                <option value="Refrigerator Repair">Refrigerator Repair</option>
+              </select>
+
+              <button
+              onClick={() =>
+                navigate(`/services?service=${encodeURIComponent(selectedService)}`)
+             }   
+              >Search</button>
             </div>
 
             <div className="hero-buttons">
