@@ -29,10 +29,16 @@ const Register = () => {
 
     const sendOtp = async () => {
         try {
-            await API.post("/auth/send-otp", {email: form.email })
+            const res = await API.post("/auth/send-otp", {email: form.email })
             setStep(2);
-            setMessage("OTP send to your email 📧");
             setError("");
+
+            if (!res.data.emailSent) {
+            // Email failed — show OTP on screen with note
+            setMessage(`⚠️ Email could not be sent (server restriction). Your OTP is: ${res.data.otp}`);
+            } else {
+                setMessage("OTP sent to your email 📧");
+            }
         } catch (err) {
             setError("Failed to send OTP");
         }
@@ -129,13 +135,19 @@ const Register = () => {
                             onChange={(e) => setOtp(e.target.value.trim())}
                         />
 
+                        {message && message.includes("⚠️") && (
+                            <div style={{ background: "#fff3cd", border: "1px solid #ffc107", padding: "12px", borderRadius: "8px", marginTop: "10px", fontSize: "14px" }}>
+                                {message}
+                            </div>
+                        )}
+
                         <button className="auth-btn" onClick={verifyOtp}>
                             Verify & Register
                         </button>
                     </>
                 )}
 
-                {message && <p className="success">{message}</p> }
+                {message && !message.includes("⚠️") && <p className="success">{message}</p> }
                 {error && <p className="error">{error}</p> }
 
                 <p className="auth-link">
