@@ -311,7 +311,7 @@ const Register = () => {
 
                         <input
                             className="otp-input"
-                            placeholder="Enter 6-digit OTP"
+                            placeholder="Enter OTP"
                             value={otp}
                             maxLength={6}
                             onChange={(e) => setOtp(e.target.value.trim())}
